@@ -21,6 +21,9 @@ let tree : list<obj> = [box 5;
                                     box [box 8; box []; box []]
                             ]
                         ]
+
+printfn "%A" (List.exists (fun p : List<obj> -> p) tree)
+
 try
     printfn "%A" (searchElement tree 2)
 with
